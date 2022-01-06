@@ -1,4 +1,4 @@
-run NER
+#run NER
 import sys
 sys.path.append("../ClinicalTransformerNER/")
 sys.path.append("../NLPreprocessing/")
@@ -49,7 +49,7 @@ test_root1 = Path('../data/test_set_100')
 file_ids = set()
 enss = []
 
-for fn in test_root2.glob("*.ann"):
+for fn in test_root1.glob("*.ann"):
     file_ids.add(fn.stem)
     _, ens, _ = read_annotation_brat(fn)
     #print( _)
